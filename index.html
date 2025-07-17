@@ -1,29 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Call Now</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    a {
-      background-color: #28a745;
-      color: white;
-      padding: 20px 40px;
-      font-size: 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भाग्य धाम - आध्यात्मिक मार्गदर्शन और समस्या समाधान</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a better look */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+        /* Custom gradient background for hero section */
+        .hero-bg {
+            background: linear-gradient(to bottom right, #FFD700, #FFA500, #FFFFFF); /* Yellow, Orange, White */
+        }
+        /* Button styles */
+        .btn-primary {
+            background-image: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+        }
+        .btn-whatsapp {
+            background-color: #25D366; /* WhatsApp Green */
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        /* Section background colors */
+        .section-bg-white {
+            background-color: #FFFFFF;
+        }
+        .section-bg-light-orange {
+            background-color: #FFF3E0; /* A very light orange for contrast */
+        }
+        .section-bg-light-yellow {
+            background-color: #FFFDE7; /* A very light yellow for contrast */
+        }
+    </style>
 </head>
-<body>
-  <a href="tel:+917836040434"> Call Now</a>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#home" class="text-3xl font-extrabold text-orange-600">भाग्य धाम</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-lg font-medium text-gray-700 hover:text-orange-500">होम</a></li>
+                    <li><a href="#services" class="text-lg font-medium text-gray-700 hover:text-orange-500">सेवाएँ</a></li>
+                    <li><a href="#about" class="text-lg font-medium text-gray-700 hover:text-orange-500">गुरुजी के बारे में</a></li>
+                    <li><a href="#contact" class="text-lg font-medium text-gray-700 hover:text-orange-500">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home Page) -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center py-16 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczP-v8ORm2fR-doNzWzbQzbE0Jh0XE_ITcQN-6TNhCW8mJFmriYyTGyx1K3haFfEXTKbpEfP9KvwHJM1gl8G1MlSt9C2r4Q0NzSlqtxd3eP_Zt9lqSGkaPymm27qtjdj6cnFnMKsNNWwPqYAcwLy-UA=w284-h278-s-no-gm?authuser=0?text=Guruji's+Photo" alt="गुरुजी की फोटो" class="rounded-full shadow-2xl mx-auto md:mx-0 w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-white">
+            </div>
+            <div class="md:w-1/2">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    भाग्य धाम
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-6">
+                    प्रख्यात ज्योतिषाचार्य डॉ. कन्हैया गैरोला (24+ वर्षों के अनुभव) के मार्गदर्शन में, वृक्ष-ज्योतिष एवं प्राकृतिक उपायों द्वारा जीवन की समस्याओं का समाधान प्राप्त करें।
+                </p>
+                <p class="text-3xl md:text-4xl font-bold text-red-600 mb-8 animate-pulse">
+                    जीवन की किसी भी समस्या का समाधान पाएं — अभी संपर्क करें।
+                </p>
+                <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                    संपर्क करें: <span class="text-orange-600">7836040434</span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="tel:+917836040434" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-xl uppercase tracking-wider no-underline flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9.252a1 1 0 001.07 1.687l2.585-1.292a1 1 0 011.127.179l2.585 2.585a1 1 0 01.179 1.127l-1.292 2.585a1 1 0 001.687 1.07l4.324-1.729A1 1 0 0121 16.72V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                        अभी कॉल करें
+                    </a>
+                    <a href="https://wa.me/917836040434" target="_blank" class="btn-whatsapp text-white font-bold py-3 px-8 rounded-full text-xl uppercase tracking-wider no-underline flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.87-1.6-6.063C.144 5.275 5.277.145 11.5 0c6.225.145 11.355 5.275 11.5 11.5.145 6.225-5.275 11.355-11.5 11.5-.967.001-1.933-.118-2.87-.357L.057 24zm6.597-3.807l-.42-.249c-.588-.344-.964-.974-.964-1.666 0-.693.376-1.322.964-1.666l.42-.249.249-.42c.344-.588.974-.964 1.666-.964.693 0 1.322.376 1.666.964l.249.42.42.249c.588.344.964.974.964 1.666 0 .693-.376 1.322-.964 1.666l-.42.249-.249.42c-.344.588-.974.964-1.666.964-.693 0-1.322-.376-1.666-.964zM17.5 12.5c0-.55-.45-1-1-1h-1.5v-1.5c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.5h-1.5c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1.5v1.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.5h1.5c.55 0 1-.45 1-1v-1z"/></svg>
+                        WhatsApp चैट
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-bg-light-orange py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-10">हमारी सेवाएँ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">कुंडली दोष</h3>
+                    <p class="text-gray-700">आपकी कुंडली में मौजूद दोषों का विश्लेषण और उनके प्रभावी समाधान।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">मंगलीक दोष</h3>
+                    <p class="text-gray-700">मंगलीक दोष के कारण आने वाली समस्याओं का निवारण और शांति के उपाय।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">विवाह दोष</h3>
+                    <p class="text-gray-700">विवाह में आ रही बाधाओं और देरी के ज्योतिषीय कारण और समाधान।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">शनि दोष</h3>
+                    <p class="text-gray-700">शनि की साढ़े साती, ढैया और अन्य दोषों के प्रभाव को कम करने के उपाय।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">काल सर्प दोष</h3>
+                    <p class="text-gray-700">काल सर्प दोष के नकारात्मक प्रभावों से मुक्ति पाने के लिए विशेष समाधान।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">करियर, व्यापार, प्रेम</h3>
+                    <p class="text-gray-700">करियर, व्यापार और प्रेम संबंधों से जुड़ी समस्याओं का व्यक्तिगत मार्गदर्शन।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">वास्तु दोष (Vastu Dosh)</h3>
+                    <p class="text-gray-700">आपके घर या कार्यस्थल में वास्तु दोषों की पहचान और उनके निवारण के उपाय।</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">वास्तु परामर्श (Vastu Consultation)</h3>
+                    <p class="text-gray-700">समृद्धि और सकारात्मक ऊर्जा के लिए विस्तृत वास्तु परामर्श सेवाएँ।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Guruji Section -->
+    <section id="about" class="section-bg-light-yellow py-16 px-4">
+        <div class="container mx-auto text-center md:text-left">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-10">गुरुजी के बारे में</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczP-v8ORm2fR-doNzWzbQzbE0Jh0XE_ITcQN-6TNhCW8mJFmriYyTGyx1K3haFfEXTKbpEfP9KvwHJM1gl8G1MlSt9C2r4Q0NzSlqtxd3eP_Zt9lqSGkaPymm27qtjdj6cnFnMKsNNWwPqYAcwLy-UA=w284-h278-s-no-gm?authuser=0?text=Guruji" alt="डॉ. कन्हैया गैरोला" class="rounded-full shadow-lg mx-auto w-48 h-48 object-cover border-4 border-white">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-3xl font-bold text-orange-600 mb-4">डॉ. कन्हैया गैरोला</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        प्रख्यात ज्योतिषाचार्य डॉ. कन्हैया गैरोला 24+ वर्षों के विशाल अनुभव के साथ ज्योतिष के क्षेत्र में एक जाना-माना नाम हैं। उन्होंने हजारों लोगों को उनके जीवन की जटिल समस्याओं से बाहर निकलने में मदद की है।
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        उनकी विशेषज्ञता **वृक्ष-ज्योतिष** और **प्राकृतिक उपायों** में निहित है। वे प्रकृति के गहरे ज्ञान और प्राचीन ज्योतिषीय सिद्धांतों को मिलाकर व्यक्तिगत मार्गदर्शन प्रदान करते हैं, जिससे जीवन में सकारात्मक बदलाव आते हैं। उनका मानना है कि प्रकृति और आध्यात्मिक ज्ञान का संगम ही वास्तविक समाधान की कुंजी है।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-bg-white py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-10">हमसे संपर्क करें</h2>
+            <div class="flex flex-col items-center space-y-6">
+                <p class="text-2xl font-semibold text-gray-700">
+                    <svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9.252a1 1 0 001.07 1.687l2.585-1.292a1 1 0 011.127.179l2.585 2.585a1 1 0 01.179 1.127l-1.292 2.585a1 1 0 001.687 1.07l4.324-1.729A1 1 0 0121 16.72V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                    मोबाइल: <a href="tel:+917836040434" class="text-orange-600 hover:underline">7836040434</a>
+                </p>
+                <p class="text-2xl font-semibold text-gray-700">
+                    <svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                    ईमेल: <a href="mailto:bhagyadhamonline@gmail.com" class="text-orange-600 hover:underline">bhagyadhamonline@gmail.com</a>
+                </p>
+                <p class="text-2xl font-semibold text-gray-700">
+                    <svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c-4.41 0-8 3.59-8 8 0 6 8 14 8 14s8-8 8-14c0-4.41-3.59-8-8-8zm0 11.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path></svg>
+                    स्थान: जनकपुरी, दिल्ली
+                </p>
+            </div>
+            <div class="mt-10">
+                <p class="text-xl text-gray-600">प्रकृति और प्राचीन ज्ञान के संगम से पाएँ व्यक्तिगत मार्गदर्शन।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 भाग्या धाम। सभी अधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
 </body>
 </html>
