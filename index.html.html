@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>भाग्य धाम - आध्यात्मिक मार्गदर्शन और समस्या समाधान</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        /* Custom font for a better look */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+        /* Custom gradient background for hero section */
+        .hero-bg {
+            background: linear-gradient(to bottom right, #FFD700, #FFA500, #FFFFFF); /* Yellow, Orange, White */
+        }
+        /* Button styles */
+        .btn-primary {
+            background-image: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+        }
+        .btn-whatsapp {
+            background-color: #25D366; /* WhatsApp Green */
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        /* Section background colors */
+        .section-bg-white {
+            background-color: #FFFFFF;
+        }
+        .section-bg-light-orange {
+            background-color: #FFF3E0; /* A very light orange for contrast */
+        }
+        .section-bg-light-yellow {
+            background-color: #FFFDE7; /* A very light yellow for contrast */
+        }
+
+        /* Product Card Styles */
+        .product-card {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensures button is at the bottom */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h3 {
+            font-size: 1.75rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #ea580c; /* text-orange-600 */
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: #4a5568; /* text-gray-700 */
+            margin-bottom: 1rem;
+            flex-grow: 1; /* Allows description to take available space */
+        }
+
+        .product-category-heading {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #1a202c; /* text-gray-900 */
+            margin-bottom: 2.5rem; /* mb-10 */
+            text-align: center;
+        }
+
+        .product-price {
+            font-size: 1.5rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #d97706; /* text-amber-600 */
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-buy-now {
+            background-color: #10B981; /* Emerald Green */
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-buy-now:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+        }
+
+        /* Service Card Styles */
+        .service-card {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid #FFEDD5; /* light orange border */
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            object-fit: contain; /* Ensures the image fits without cropping, use 'cover' if you prefer cropping to fill */
+            margin: 0 auto 1rem auto; /* Center image and add bottom margin */
+            border-radius: 0.5rem; /* Slightly rounded corners for images */
+        }
+
+        .service-card h3 {
+            font-size: 1.75rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #ea580c; /* text-orange-600 */
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: #4a5568; /* text-gray-700 */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+<header class="bg-white shadow-md py-4 sticky top-0 z-50">
+<div class="container mx-auto flex justify-between items-center px-4">
+<a class="text-3xl font-extrabold text-orange-600" href="#home">भाग्य धाम</a>
+<nav>
+<ul class="flex space-x-6">
+<li><a class="text-lg font-medium text-gray-700 hover:text-orange-500" href="#home">होम</a></li>
+<li><a class="text-lg font-medium text-gray-700 hover:text-orange-500" href="#services">सेवाएँ</a></li>
+<li><a class="text-lg font-medium text-gray-700 hover:text-orange-500" href="#products">उत्पाद</a></li>
+<li><a class="text-lg font-medium text-gray-700 hover:text-orange-500" href="#about">गुरुजी के बारे में</a></li>
+<li><a class="text-lg font-medium text-gray-700 hover:text-orange-500" href="#contact">संपर्क</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="hero-bg min-h-screen flex items-center justify-center py-16 px-4" id="home">
+<div class="container mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+<div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+<img alt="गुरुजी की फोटो" class="rounded-full shadow-2xl mx-auto md:mx-0 w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-white" src="https://lh3.googleusercontent.com/pw/AP1GczP-v8ORm2fR-doNzWzbQzbE0Jh0XE_ITcQN-6TNhCW8mJFmriYyTGyx1K3haFfEXTKbpEfP9KvwHJM1gl8G1MlSt9C2r4Q0NzSlqtxd3eP_Zt9lqSGkaPymm27qtjdj6cnFnMKsNNWwPqYAcwLy-UA=w284-h278-s-no-gm?authuser=0?text=Guruji's+Photo"/>
+</div>
+<div class="md:w-1/2">
+<h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    भाग्य धाम
+                </h1>
+<p class="text-xl md:text-2xl text-gray-700 mb-6">
+                    प्रख्यात ज्योतिषाचार्य डॉ. कन्हैया गैरोला (24+ वर्षों के अनुभव) के मार्गदर्शन में, वृक्ष-ज्योतिष एवं प्राकृतिक उपायों द्वारा जीवन की समस्याओं का समाधान प्राप्त करें।
+                </p>
+<p class="text-3xl md:text-4xl font-bold text-red-600 mb-8 animate-pulse">
+                    जीवन की किसी भी समस्या का समाधान पाएं — अभी संपर्क करें।
+                </p>
+<p class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                    संपर्क करें: <span class="text-orange-600">7836040434</span>
+</p>
+<a href="tel:917836040434"
+   class="inline-block bg-red-500 hover:bg-red-600 text-white text-lg font-bold py-3 px-6 
+   rounded-full shadow-xl ring-2 ring-red-300 animate-bounce transition duration-300 transform hover:scale-105">
+   अभी कॉल करें
+</a>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">
+<svg class="w-6 h-6 mr-2" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.87-1.6-6.063C.144 5.275 5.277.145 11.5 0c6.225.145 11.355 5.275 11.5 11.5.145 6.225-5.275 11.355-11.5 11.5-.967.001-1.933-.118-2.87-.357L.057 24zm6.597-3.807l-.42-.249c-.588-.344-.964-.974-.964-1.666 0-.693.376-1.322.964-1.666l.42-.249.249-.42c.344-.588.974-.964 1.666-.964.693 0 1.322.376 1.666.964l.249.42.42.249c.588.344.964.974.964 1.666 0 .693-.376 1.322-.964 1.666l-.42.249-.249.42c-.344.588-.974.964-1.666.964-.693 0-1.322-.376-1.666-.964zM17.5 12.5c0-.55-.45-1-1-1h-1.5v-1.5c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.5h-1.5c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1.5v1.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.5h1.5c.55 0 1-.45 1-1v-1z"></path></svg>
+                        WhatsApp चैट
+                    </a>
+</div>
+</div>
+</div>
+<div class="mt-10 flex justify-center space-x-6"><a class="text-lg font-semibold text-orange-700 hover:text-red-600 transition-all hover:scale-110" href="https://www.facebook.com/profile.php?id=61573443024161" target="_blank">🌐 Facebook</a><a class="text-lg font-semibold text-orange-700 hover:text-red-600 transition-all hover:scale-110" href="https://www.instagram.com/bhagyadham/" target="_blank">📸 Instagram</a><a class="text-lg font-semibold text-orange-700 hover:text-red-600 transition-all hover:scale-110" href="https://www.youtube.com/@BhagyaDham-b1r" target="_blank">▶️ YouTube</a></div></section>
+<!-- वीडियो सेक्शन: समस्याओं का समाधान -->
+<section class="bg-gradient-to-br from-yellow-100 via-orange-100 to-white py-16 px-4">
+<div class="container mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-orange-700 mb-8 animate-pulse">
+      समस्याओं का समाधान — वीडियो में जानें
+    </h2>
+<div class="max-w-4xl mx-auto shadow-2xl rounded-xl overflow-hidden">
+<div class="relative" style="padding-top: 56.25%;">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute top-0 left-0 w-full h-full rounded-xl" frameborder="0" src="https://www.youtube.com/embed/3U5EdrQEpvg?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=3U5EdrQEpvg">
+</iframe>
+</div>
+</div>
+<div class="mt-8">
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">
+        WhatsApp पर संपर्क करें
+      </a>
+</div>
+</div>
+</section>
+<section class="section-bg-light-orange py-16 px-4" id="services">
+<div class="container mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-gray-900 mb-10">हमारी सेवाएँ</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card">
+<img alt="कुंडली दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczMTbWdxeLNAHXpaseVD3sTbP1da-pJkK1EqadMHuPQlvKe6cj24qrJpA5cpXkzWDNoBbr0PJ2RISy0xZBIvshp5lY8jlHqMMymnZ0pBMVR956cCQo7p3E7DEFs3TIOo8-ijp5wjS-0Unaw1Cl3i2QFv=w607-h607-s-no-gm?authuser=0"/>
+<h3>कुंडली दोष</h3>
+<p class="text-gray-700">आपकी कुंडली में मौजूद दोषों का विश्लेषण और उनके प्रभावी समाधान।</p>
+</div>
+<div class="service-card">
+<img alt="मंगलीक दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczN89qWzHPwV-rxf1kpjyBlIpvnifOuglpviXJycAdvQOwj9x9K9Kw6rMxQL9a2ZEUFmfHEw3F2ibRX56Yu2H7wmwVAr1H9kIpZSR2y2D1Rais9bxdxr-Prs_lcMsxytBSyUjDDCbzIB9hnq2BG3XXFG=w607-h607-s-no-gm?authuser=0"/>
+<h3>मंगलीक दोष</h3>
+<p class="text-gray-700">मंगलीक दोष के कारण आने वाली समस्याओं का निवारण और शांति के उपाय।</p>
+</div>
+<div class="service-card">
+<img alt="विवाह दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczNrCK-aJRNgWlTnaIhbH5-Lx4sXfz8x4rzyv_JUMAgjkIXpvWUdIGh8VIU8Szpj27NkHEVHAtLn4IdO0ZrMz7fyorvGaC-Xhx089-PjRT9Z5Rb3GAezUf-2rw1ZDk5olb09aMqup_0JNUQ2l5jMGidZ=w607-h607-s-no-gm?authuser=0"/>
+<h3>विवाह दोष</h3>
+<p class="text-gray-700">विवाह में आ रही बाधाओं और देरी के ज्योतिषीय कारण और समाधान।</p>
+</div>
+<div class="service-card">
+<img alt="शनि दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczNyaXre5APv4uxix84bQ0a2Z20sqGH9mEzfajz1TAkFNAl00Qcsw_oQHLLLF_2pfCi3QDy8W6BPRaQGo164VeViOTrYBjrMHTKZMJ4MuTBu5Pi6UACWRU8mwhMY5LrpsabG3v5ZCNG_0ADEH1bQ1sry=w607-h607-s-no-gm?authuser=0"/>
+<h3>शनि दोष</h3>
+<p class="text-gray-700">शनि की साढ़े साती, ढैया और अन्य दोषों के प्रभाव को कम करने के उपाय।</p>
+</div>
+<div class="service-card">
+<img alt="काल सर्प दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczNnOVlypuiWOMZVh4NPbdAQ4GId7wl5VGLg0ZvIDOzUJazUgdbncNhprbZZ25xGRJYc-YfGWqFaLbsti7dAQdV01-3VWiKpRqtEiUV0HbEUPfIIdzqjMEFdV6QTcObTk_wzLYJWSISx8EhlHTiby_Qr=w607-h607-s-no-gm?authuser=0"/>
+<h3>काल सर्प दोष</h3>
+<p class="text-gray-700">काल सर्प दोष के नकारात्मक प्रभावों से मुक्ति पाने के लिए विशेष समाधान।</p>
+</div>
+<div class="service-card">
+<img alt="करियर, व्यापार, प्रेम इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczOGVCNQ-4WgxPJjQgPuh8r66EWF0kE0K6O8G72OLFJ1dpgKRxlF0vzrymFXz9kqhuzWXnApOKM0TEBs_TH1okit_asMIGyVNl1HAALG-_FFSAOBrhcqw4TiX4TIdmftixMOjo_f2bA3jbwaqj8wP-6I=w607-h607-s-no-gm?authuser=0"/>
+<h3>करियर, व्यापार, प्रेम</h3>
+<p class="text-gray-700">करियर, व्यापार और प्रेम संबंधों से जुड़ी समस्याओं का व्यक्तिगत मार्गदर्शन।</p>
+</div>
+<div class="service-card">
+<img alt="वास्तु दोष इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczPwQOqj9prujrSKRxxRi_215f1E_VzC3AKK2B9-D8EgbIKtdY-PMkNUi-RjEqveQNlySdzZcYdrSnJuhRxDzzGdBuzVqpcG583XBeFKcmZzGk2-qcsb4hZRyQxMTQ3CEODR5ez_3E0PathF9M8fqgNs=w607-h607-s-no-gm?authuser=0"/>
+<h3>वास्तु दोष (Vastu Dosh)</h3>
+<p class="text-gray-700">आपके घर या कार्यस्थल में वास्तु दोषों की पहचान और उनके निवारण के उपाय।</p>
+</div>
+<div class="service-card">
+<img alt="वास्तु परामर्श इमेज" class="mx-auto mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczNq4EFpmIsHIOxn99BtKAgF99rCUgHe5Uujp0OsFz8R3KIUo2F0lBTPOncxhAbz7M1W-MYLXNi3HTc6QFd0dXNBMBMvSR8Yl08-XQ50D3BxQ4NkC6jTbRXcYqLExFx_I1jFVQ7yNeIq8IR5tLJdevEX=w607-h607-s-no-gm?authuser=0"/>
+<h3>वास्तु परामर्श (Vastu Consultation)</h3>
+<p class="text-gray-700">समृद्धि और सकारात्मक ऊर्जा के लिए विस्तृत वास्तु परामर्श सेवाएँ।</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-bg-light-yellow py-16 px-4" id="products">
+<div class="container mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-gray-900 mb-10">हमारे उत्पाद</h2>
+<h3 class="product-category-heading mt-12">विशेष उत्पाद</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="वृक्ष ज्योतिष पत्रिका" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPJ0W_GMMJC-xSNy9GuZNQBSvxcvYIcw1o8aa8gRlY0ZPKKU6fDaaDIMyNNcmlxZhpUuMieLNiWF9cyrCufnkOadNZK7OQmyZD_q5z8fq4oVXinQ3DfmfJG4JEeF5n3b2m9P1pz2cpnHOVrXVMUq63S=w607-h607-s-no-gm?authuser=0"/>
+<h3>वृक्ष ज्योतिष पत्रिका</h3>
+<p>अपने भविष्य और व्यक्तित्व को वृक्ष ज्योतिष के माध्यम से जानें।</p>
+<p class="product-price">₹5100</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="मच्छमणि" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMRxwwF_lH8wkAY91X4XW02qfWoNDzxAG6QiCwL8CaJJqlVUdbQca_XSMEGN8o8QzazkOcyV3yJ9NhtqPhrvnOgtq0imIWAqNEyvtGHyfKS7mklzBoZ8gnDi6TiYpsLMSBS6CC1BJ1rDvV3tzHButog=w800-h533-s-no-gm?authuser=0"/>
+<h3>मच्छमणि</h3>
+<p>दुर्भाग्य को दूर करने और धन-समृद्धि लाने के लिए।</p>
+<p class="product-price">₹2499</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="गौ लोबान कप" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOu1Wt6ENQVCcaNY2vYj9Gc796WlmE8-toIjLJU4o2buVbehW9U4nPsTKagAnagiPNgYmyLpnj9vgeJhG6KyV06kGTXCM2N4pCPX5FEb2PWMUI7l8LbBmBeKNnVdDGDzATJBuW8YwMaWSqnbJUMa0hs=w607-h607-s-no-gm?authuser=0"/>
+<h3>गौ लोबान कप</h3>
+<p>घर में सकारात्मक ऊर्जा और शुद्ध वातावरण के लिए।</p>
+<p class="product-price">₹751</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="स्फटिक माला" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPbOdD8uWf1ezb-NZj5yamelnUiprohljlPU4bOhoDoMBtStyBU5jQBJ_6efMo6I7aS3hqe3kym_taxQgOAF6tsxK1pnfvAfHGctCQb37CBtBInkIuS5Y6_eZvrP5pdS7sx4NX3F1MGOXJxMz13bep_=w607-h607-s-no-gm?authuser=0"/>
+<h3>स्फटिक माला</h3>
+<p>मानसिक शांति और आध्यात्मिक विकास के लिए।</p>
+<p class="product-price">₹1499</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="5 मुखी रुद्राक्ष" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczO8FSj1Mo4s7hnImFej8210i7upQyB2Zn41ic0wrFZD94Z-28NjUftyQSmlBDm7IrpPAQyUT-NMJcNERal5EMyAWZaHMGXiV4k65g86gepdVq8MgQSZlaxScozfxOAlq3jugQU4mT1J-e0BGsPi3wLo=w650-h400-s-no-gm?authuser=0"/>
+<h3>5 मुखी रुद्राक्ष</h3>
+<p>शांति, स्वास्थ्य और आध्यात्मिक उन्नति के लिए।</p>
+<p class="product-price">₹1100</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="काली गुंजा माला" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMhdV0ONp-jZODtepj2XcuiXf5SBEI80g4XrTpqmis0dKgO5arsMwh4pTyc4gnKPB0CxnpXj7NwZmMT7suxyb7UCTv2EIXW8DDHDj7RNyNmkkfaJxVQ8ycilTNizPV_0-8Cp7ERw1-WkdbtKxonNZj6=w607-h607-s-no-gm?authuser=0"/>
+<h3>काली गुंजा माला</h3>
+<p>नकारात्मक ऊर्जा से बचाव और धन आकर्षण के लिए।</p>
+<p class="product-price">₹2100</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">सर्व कार्य सिद्धि और शक्ति के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="सर्व कार्य सिद्धि यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOhRtqOojdLdZrDcjlxy86FowrsfgF4PaJw42q6GgezJnOKWn0MjO2FOpsS7qFxJq2cfsjCVT8YV9oQhl_uyRxJeOvUjIqT7xZUssfDw04874zoczSCXHnJC7oT2v6Kies4yNzizpWJX64iorqNzx8Z=w569-h529-s-no-gm?authuser=0"/>
+<h3>सर्व कार्य सिद्धि यंत्र</h3>
+<p>सभी कार्यों में सफलता और मनोकामना पूर्ति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="कार्य सिद्धि यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczM4QG2sjp8LQ03W5ct_k2MS-qHB20jCY5xBAl0WX733TxkJprfUmclabTSYXy8e9NF5b4ixwylv7Mszu5jpqQ5keLUR_mF-nsXRcACzcfDhJlF-S4NHS0h-OuFV7jmkQ9k89f3HU-Z6KXk2lBg_4Wfb=w342-h375-s-no-gm?authuser=0"/>
+<h3>कार्य सिद्धि यंत्र</h3>
+<p>किसी भी विशेष कार्य में सफलता सुनिश्चित करने हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="बगलामुखी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPwCSyVeXCfdaQjskx_e-WywPn6EXlk-ACAaJP1JDUlPaz_GVsnK7xQjf7xGE3hyKftCRr7L_5jp-9JeIhlYKLxMF9vD4P5MfhSXp5GWQjtByjmrMJ-SI-aV33HZPG736DPNW4qWSWO5NMBUfWTP7Ou=w600-h597-s-no-gm?authuser=0"/>
+<h3>बगलामुखी यंत्र</h3>
+<p>शत्रुओं पर विजय और सुरक्षा के लिए शक्तिशाली यंत्र।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="दुर्गा बीसा यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPP3fMNl4kH0AJvWPgkqdOrmjMRdhtyf7YvpdVADF1JD_e_v0xjciN2CP1Xbggun1TuihWdvZWoT7X-jUlv6Jpyc9VzGRg30jyrOp5xZyLbSLFXf3hhsvkO1HXuCRlqNbVA8KHRgOnmMu1bElDcsfnn=w612-h607-s-no-gm?authuser=0"/>
+<h3>दुर्गा बीसा यंत्र</h3>
+<p>शक्ति, सुरक्षा और सभी बाधाओं को दूर करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="काली यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczO_a7X_WEHmbanszrR0pmXmE-BYO2zCcd9U4c6l-XiYrMNyYAWxils-0OkfPXz8tbFlYrNJ3Nj4PXeIj_NvqlAUoqE4uLhm2g43QaJOPazpRIXyuZzplxuxx9GBWGV2ZEYF_UBk2v4qWmTJACIcqB6D=w427-h418-s-no-gm?authuser=0"/>
+<h3>काली यंत्र</h3>
+<p>नकारात्मक शक्तियों से रक्षा और आध्यात्मिक विकास हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="चामुंडा यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNQtZlZ0o0Bkmbo6AY28R-N3TB6RBwYkKtW46enph6fJQ1XN9mFukrCxdBqlc-52hWquTfWxfYYv-8A8fmJ17w2lVSyo1IjBC7itSVO2wuEiWQ5v4UlEW0m4zWSjFspsRmHEIjlB6X2Fhp0Ec-ahLBn=w607-h607-s-no-gm?authuser=0"/>
+<h3>चामुंडा यंत्र</h3>
+<p>शत्रु दमन और बुरी शक्तियों से बचाव के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="भैरव यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOcmE_Dh-XycQyqG45Fqxkl94FsxQWh2mPT-L2p1uftbWF1klAtU-JZFdgjfnm4KmqDosjBXsk5QXBvMv74jMCtgc9remlrIHHBC437LXrQzuRCIQIJ4w5zRAAQHf1YirY7Hf1F7TX8D45P93b6p6Wp=w300-h246-s-no-gm?authuser=0"/>
+<h3>भैरव यंत्र</h3>
+<p>डर, भय और नकारात्मक ऊर्जा से मुक्ति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="हनुमान यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOs-5H2urqFtq35UwYbg4LRbvwZT3J-Zmj8jlEJM-ywIvpAPyRpVR03V6SWjoVNN-2DsD3gPclpZeeWAEEppQAxzbi08R3QIvryZSqOBR-UfYujFrrC22byIFwpYSTGhJgL2zY5zFfccQIgP2dsQWvN=w1079-h607-s-no-gm?authuser=0"/>
+<h3>हनुमान यंत्र</h3>
+<p>शक्ति, साहस और सुरक्षा प्रदान करने वाला यंत्र।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">धन, समृद्धि और व्यापार के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="श्री यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOtpYVaMkmxlRUu5mQ6atpwPtePKU2kREbSFSYmliIXZjhPheWOXI-KLyI9BddrfH0cdWlLtBdjCQa5mDi957eHoPc-cVV_yLeVePE5DUa0s3OCZk09an_nqYmSzzjyUPXxm5m0sLrSsejE9BbzEbq5=w278-h300-s-no-gm?authuser=0"/>
+<h3>श्री यंत्र</h3>
+<p>धन, समृद्धि और भौतिक सुखों की प्राप्ति के लिए सर्वोत्तम यंत्र।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="कनकधारा यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOiNWq4g6jk4sC5O2znRs44YAx0Eve9o7uCEXAjYT-FsFKWsyDIOir446PDWubvGQnhSLDSDbYqY7gBK-A7BSbR0CMOI784daDfjFfkMi3oc6iweVMfYy9RS77ejchzQSyzJ-N-OmGJd3xv-4Y5GtEe=w256-h300-s-no-gm?authuser=0"/>
+<h3>कनकधारा यंत्र</h3>
+<p>अचानक धन लाभ और वित्तीय स्थिरता के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="कुबेर यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczP1zXZ0MMxrAx3XXewk2x7mA1DU2-ZVhzVfKHRRP-Hc1255pOwVRi09zVmQQESzemUsEM888ADgcgl2-js14cPUn49G35Urr3FQJBpk6OS8oedqojS4MZBP5Rw3Ibzn9GvrNh9NyvbrwsDafiW_Lzuu=w450-h450-s-no-gm?authuser=0"/>
+<h3>कुबेर यंत्र</h3>
+<p>धन के देवता कुबेर का आशीर्वाद प्राप्त करने हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="लक्ष्मी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMdZRsc5qOt2iTXMb0Skl3u7JrA9BkY_tplwA5see2pZ-Ck5opeQtUpCFdqTPoF4mmlqEzSc0rnkq0Jjwkm0NXN_asi8aw4YjKNVW43f9sIbwvmvRjYa67hTrZZQ89cZUFdtwuhuD-plIpacnSHrFeA=w607-h607-s-no-gm?authuser=0"/>
+<h3>महालक्ष्मी यंत्र</h3>
+<p>देवी लक्ष्मी की कृपा और धन वृद्धि के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="धन लक्ष्मी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNlFa7Ie8eLFHfPGdkWF7DDcrMeu-AzrH8XvIzTqoSwzTtDCDvrY7bWQQursgDPx3NkB5GjYueB27ydEi2P3ykfBKLK2v6tClyE-8VrPkvPFQXr2P3Tw-4utVwP3SGvBEWmQP3ttgqdP_r42Jh-LeuU=w500-h500-s-no-gm?authuser=0"/>
+<h3>धन लक्ष्मी यंत्र</h3>
+<p>संपत्ति और धन के प्रवाह को बढ़ाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="व्यापार वृद्धि यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczN8rS41iiRY6bQ7qsSE0ce69YhhkqEK39JSlFQkW_CVNEIj58hCSuFi98ZyJenFj5Uj5bdkVoL9B6B_aoPcvpwBODo05chvimGyHuxQu3vwTIPYwMYovas00gWyZ3LwgJHQcVsNuT02MjZpBp7H6O13=w607-h607-s-no-gm?authuser=0"/>
+<h3>व्यापार वृद्धि यंत्र</h3>
+<p>व्यापार में सफलता और लाभ बढ़ाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="अष्ट लक्ष्मी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNvw2UMwp9lIUJSbNIxBrZsFBkU__pT_xAT-a1vS0K_Bd_kFKfGKhFAmYc2rPah_lO2_UaETQzfKX7bfhP3UQyAkA3p5lK1xBQFVQ6o2bLyLwTw1djzTm0Vkv9yCifxBF_l_rm4vKaN_IFLlhRHYMNY=w607-h607-s-no-gm?authuser=0"/>
+<h3>अष्ट लक्ष्मी यंत्र</h3>
+<p>लक्ष्मी के आठ स्वरूपों का आशीर्वाद प्राप्त करने हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="संपूर्ण महालक्ष्मी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMFf3VjeoPkrGsoUSPK1rYNojHv-AhoWDhVfxVWCAL3JT-o9bdKutdDk396OPqRk6SDfxzyTx1dtj100iPMIHQfU_SYIxTBNx_ZFX78RsOOC5KaX3fqmv926BUIimhc2Khu3HG5gA_3duB2QJ6LGXkA=w569-h569-s-no-gm?authuser=0"/>
+<h3>संपूर्ण महालक्ष्मी यंत्र</h3>
+<p>समग्र धन, समृद्धि और ऐश्वर्य के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">प्रेम, आकर्षण और विवाह के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="कामदेव यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOi2gMWI29Sq7tNg-ZF8EPLTzcdxUIoHWlIWUmxvoE4Sxs5CfZjOdGUO1dwIEkD9jY9-MM1rk6A-LoISL5U6ijawAx64fitK8XcxC_DQMwolgDfjl89mLxK8bq_tNrZP-yMPaFrHjTnaTN3jrD9SsSq=w575-h575-s-no-gm?authuser=0"/>
+<h3>कामदेव यंत्र</h3>
+<p>प्रेम संबंधों में सुधार और आकर्षण बढ़ाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="मोहिनी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNvFRYIhI7VW71AYMnkGQs-WiI2XGh15eDQkwj6IYQBZwbTYEkFiANOqLcBuodqPWCwF7P3lwChK_BuaWDdviLBubLGpmm2gFcOMcZTfNQUFyes5MsRnm3J0LJ36ZsXbnGPySpdqkYpxlQPiWG8bXpB=w512-h493-s-no-gm?authuser=0"/>
+<h3>मोहिनी यंत्र</h3>
+<p>वांछित व्यक्ति को आकर्षित करने और संबंधों में मधुरता लाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="स्वयंवर यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMdhQW6aPUSk2_JsqWo1tBIsoAQnnMrqwdTghl3aVQ0qFDxx86TZsjxsCSrtQAw1oQetioPeGqVwlarGyjNosa9WcmhlpU2zjTboJ-uVAgnEtdY9KD2XKE-rLaHtatSxbwsECNjzTeyFNEpkxy29ziE=w569-h569-s-no-gm?authuser=0"/>
+<h3>स्वयंवर यंत्र</h3>
+<p>शीघ्र विवाह और मनचाहा जीवनसाथी प्राप्त करने हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="वशीकरण यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMF0A3MenuQ6Alt8071LOHL27N5c86MLDFk93EUOXlTOoCxQqQMH3DGYBPFIpc_ebufuWXofliJHncNwonSKeJchtVgODKUQF2LWQjVGeJ10qQKqOgw_YM-JYCnCnDnv3k3nJ5-hppQ9rQVc_n3d5ml=w256-h300-s-no-gm?authuser=0"/>
+<h3>वशीकरण यंत्र</h3>
+<p>दूसरों को अपने पक्ष में करने और प्रभाव बढ़ाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="राधा कृष्ण प्रेम यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczM-vLpQmbsrcPD1hKV0Azc-GAMpxkQt_NuLhtyusyHb995ifZsumvZ397VExEQDJQkNCNY63U8Ci0qLrNslZzXIU-sBfUIZ54SU0V1lo51CHRh4yQTS8g7Le2WtXkB5PvMTApQnaAaFMU2_0x7hqf-9=w500-h500-s-no-gm?authuser=0"/>
+<h3>प्रेम वृद्धि यंत्र</h3>
+<p>प्रेम और वैवाहिक जीवन में सामंजस्य स्थापित करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="सौभाग्य यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPa3J0o2x6Uzuphu93fQkr2EDzZXc_H17iyPyldotu80x2j9kmt4UpXCh3ZHBH407rD98_cFuCJj-QA5xlwKlurGQTq-zoAfZI8-QTJlv9eBkdKyKsQdpSTbdSJxa7c-VOYIZ-a2CiJBBVTgEHgAOc4=w569-h569-s-no-gm?authuser=0"/>
+<h3>मत्स्य यंत्र</h3>
+<p>सौभाग्य और समृद्धि को आकर्षित करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="शुक्र यंत्र (प्रेम और सौंदर्य के लिए)" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNyi3zsHKOfrLULuAM_b8H01OyosJjTmJOjQZVDKTlosM3m5Wc42zDBR0mCjlZFg7Kd9UjcxhlphS8CRxLxLS89qSGF_oFkuyP9U0_CA_tTid5yXSZVymNZryAr_GM1bx5GXwvSkGWuj-_oY8Sg1MZo=w608-h607-s-no-gm?authuser=0"/>
+<h3>शुक्र यंत्र (प्रेम और सौंदर्य के लिए)</h3>
+<p>प्रेम, सौंदर्य और भौतिक सुखों में वृद्धि हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">रक्षा, शत्रु नाश और स्तंभन के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="बगलामुखी यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPwCSyVeXCfdaQjskx_e-WywPn6EXlk-ACAaJP1JDUlPaz_GVsnK7xQjf7xGE3hyKftCRr7L_5jp-9JeIhlYKLxMF9vD4P5MfhSXp5GWQjtByjmrMJ-SI-aV33HZPG736DPNW4qWSWO5NMBUfWTP7Ou=w600-h597-s-no-gm?authuser=0"/>
+<h3>बगलामुखी यंत्र</h3>
+<p>शत्रुओं पर विजय, मुकदमे में सफलता और नकारात्मक ऊर्जा से रक्षा।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="नरसिंह यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNFRQ51bE5l6MY7Ki-NX6jCQeRYwwdlYEunBD02NCHQ1p8UuGhIX4uGa0vhJSJ0dn14f4ET22K4vdJ77xABpJRvwiaKcut8Wgrq3QBSWZ0Sw9AB9E1rcFV2FuTodyEiQ1ehSzq4jbqX4tDuZ9KkwgxB=w569-h569-s-no-gm?authuser=0"/>
+<h3>नरसिंह यंत्र</h3>
+<p>बुराई पर विजय और सभी प्रकार के खतरों से सुरक्षा।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="रुद्र यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNh7oGK20a0J50F4kPjjs2qA_EfO5JIMdBu5kLE9XTUv-KxDe-KqupCtLq696sfyS6NEwm3MCnMw7OU2e3xJrzI-WZky4z_QOAa3bPgxl5UkI_GlQFpYobOf__IU87AAs_reWlwCu9tywnJJ858Scwc=w607-h607-s-no-gm?authuser=0"/>
+<h3>रुद्र यंत्र</h3>
+<p>भगवान शिव की कृपा, सुरक्षा और भय से मुक्ति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="महा मृत्युंजय यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPuZ6ZrMUZzv7OPIYxuf4_-EynMMdVLeda8bMthotujrk1Pe6RvF_raJmHwm096rHiSCm2l1HX8_ahwaj9PvUP6__j9isqxshV3sv-krH6Cluj3lAdihuMsU0WWwIoWWBbw-gYwatfdyArSlBj6ULOF=w500-h500-s-no-gm?authuser=0"/>
+<h3>महा मृत्युंजय यंत्र</h3>
+<p>बीमारी, अकाल मृत्यु और सभी प्रकार के भय से रक्षा हेतु।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="काल भैरव यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczM4660w-cXz3775Qg3GIKORPCvAoW1Gb6YXRlHIThNI2vyuy5WlNz4tInFRK_kvs64UlIlMYnJ63wZesik0mFL0C3s6FC6dAEXn9c9QRvPhw3gMq7yzrsEXvPMpoVSYetE4E22BXgQCnBq4BtGd73t6=w600-h600-s-no-gm?authuser=0"/>
+<h3>भैरव यंत्र</h3>
+<p>जादू-टोना, बुरी नज़र और नकारात्मक प्रभावों से सुरक्षा।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="प्रत्यंगिरा यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOcEThJoNeiue06OZj-tmh9Pzta4jAKZAGyWDPRJjitp1orcuKgbivVxswGVJ5Egf0cDTH24UKX4h2GqL_043GMQ3jpt4w9Gz-4wcWqI2ubYJB0lv6fJsG0krXTo1gzAakg9LlWllgh-BLul7ZBps5T=w569-h569-s-no-gm?authuser=0"/>
+<h3>प्रत्यंगिरा यंत्र</h3>
+<p>भयंकर शत्रु बाधाओं और नकारात्मक कर्मों को नष्ट करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="रक्षा कवच यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPDNhqlyixbaJQMs34navNTlUVAafsxwQC-nwZU3ZVF_Lf7oN6fLzez7bsaLt8VPImRlcVvkiEpyN3aC-cPy-k-bp1VWNIVn2gF_A0grsTqhY7lfvwaX0GMgybeN1fDft46JKy2wj5KD6Mk9kabVwOJ=w569-h589-s-no-gm?authuser=0"/>
+<h3>रक्षा कवच यंत्र</h3>
+<p>सभी प्रकार के खतरों से पूर्ण सुरक्षा प्रदान करने वाला कवच।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">आध्यात्मिक उन्नति और ज्ञान के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="श्री चक्र / श्री यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOtpYVaMkmxlRUu5mQ6atpwPtePKU2kREbSFSYmliIXZjhPheWOXI-KLyI9BddrfH0cdWlLtBdjCQa5mDi957eHoPc-cVV_yLeVePE5DUa0s3OCZk09an_nqYmSzzjyUPXxm5m0sLrSsejE9BbzEbq5=w278-h300-s-no-gm?authuser=0"/>
+<h3>श्री चक्र / श्री यंत्र</h3>
+<p>आध्यात्मिक विकास, धन और समग्र कल्याण के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="गायत्री यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczP8ykL2L1qEi6w3eMg3iO1pqi8v0nbxNZocUWDhrNyZNG0Bb8PLYnMsVxmon5wloG5qdtoLw34dZds83wgnOdOClDiUUrxVSubbYa_lvzHAInV3D6mILx5G7P_dYO9ZjVuZYxZgiQPSGTcHByhYSV0e=w280-h286-s-no-gm?authuser=0"/>
+<h3>गायत्री यंत्र</h3>
+<p>ज्ञान, बुद्धि और आध्यात्मिक शक्ति की वृद्धि के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="सरस्वती यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNbhmP58oREI3LNgwAJEWIEDJvSPx7kiHbEXoWz97JcEWtbcIQ_rTYAhqn4IG06HxGRJt1LqhJSjyFO09i_r4yYCefQQGuUc_Z00UkfjIVdkV-_pvy_S-zhKcA_wtfQ55bb4shoVSRJmwMnGl7FCbD5=w607-h607-s-no-gm?authuser=0"/>
+<h3>सरस्वती यंत्र</h3>
+<p>शिक्षा, कला और रचनात्मकता में सफलता के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="गुरु यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPUlXy3RQ3zcFSk5RLYlJtnKZgWGrEGaBecgtbIduv86M1qOoQaY9qdXY6qCytERK59iocIuaEPR8nGoF7DAWR73W2m115rFwXHlmyMJJFIeSr_5RUs-p2wWh0_g5RlPKraLNJeB-uoBrwdfTlvtifZ=w607-h607-s-no-gm?authuser=0"/>
+<h3>गुरु यंत्र</h3>
+<p>गुरु बृहस्पति की कृपा, ज्ञान और भाग्य वृद्धि के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="दत्तात्रेय यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczO8JbWn57X_xD_2ODT7IjRbL0MWCcc0d2hv0o1s-VbezMLoka0ybKDXqCZYWjnxIzDp4hOiHeINyv3-vBnqbFd52agEOxGSfze30ydH46upPDNPEDBqECPSnTrqAJSO9buFDNbV2uHCqVofM0_sgeR0=w380-h410-s-no-gm?authuser=0"/>
+<h3>दत्तात्रेय यंत्र</h3>
+<p>आध्यात्मिक मार्गदर्शन, ज्ञान और सुरक्षा के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="राम रक्षा यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMjsaR804LzWif92gbOgys9_z4BiOXVm5byfjornqY8X1R9b84CKF2UTyJnlWir0De3I386sC64bFru3DPE0fhjfNpovjZ9HWSSpwJWZEB6SAnotWMuuyG5FIbE4mRIEjUJ1BTjwppec-6bQ_Wdnymb=w300-h300-s-no-gm?authuser=0"/>
+<h3>राम रक्षा यंत्र</h3>
+<p>भगवान राम की सुरक्षा और जीवन में शांति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="ॐ यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMQYqy_da-dAx26IeSUcr0fEvugXGtILEZXhSl4F6UrPHxjO5_YicIQraqqYaWVAWaHeh1Js3GwSYifUCDVxgX1ivPg9XbpA-mMR2ZQm22zcnASj7N_C58S6S2QVSRcJHHgnWhfV9Hqy-phJV-vu6ss=w607-h607-s-no-gm?authuser=0"/>
+<h3>ॐ यंत्र</h3>
+<p>शांति, ध्यान और आध्यात्मिक जागृति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="सूर्य यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczNlsP-gdnank2LZfVauWyQ4LPWft5YdQNBjBbTlz9i5XbQNG1qXd38KqLoZ3k_9aZYucprvwCLQA7GqXLgYe7d6CP3VA8cG-yFFrt2FEIm4VRwVKCAV42pZrDwxtzwd46dRVCyPxcLzWbT2iu5M6Kcz=w292-h300-s-no-gm?authuser=0"/>
+<h3>सूर्य यंत्र</h3>
+<p>नेतृत्व क्षमता, स्वास्थ्य और प्रसिद्धि के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="चंद्र यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPSmwc3V7FbgTMiFuOPAyOFYAvk9mF5dEAi4XZcjYO0slnNVvpurMdk_WCrzMB5H2WDRpdUyXSuZULb9da4S4POF2JmfzxzQZvWiTPeO6MjRmoEHSruLCOp31M9T4qFdNok5Ml6_NOXFze8xI8x9nCd=w300-h300-s-no-gm?authuser=0"/>
+<h3>चंद्र यंत्र</h3>
+<p>मानसिक शांति, भावनात्मक संतुलन और सुख के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">ग्रह दोष निवारण और ज्योतिष अनुकूल यंत्रों के लिए</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="नवग्रह यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOWIDyH4OWVbNApAkeB4bKe1cFlCOLj6-ZDNeQ5bOiujPjc0C-FT0s0zKJDiY1PbfdoWfkO0dQjY-ex5nj2mLm2tTvu7925QbZEJElY6GhH2ggUHeg8ABa3GZ8-WBoSi2E9KvdzhqMcXxnz7RdT6M5B=w300-h300-s-no-gm?authuser=0"/>
+<h3>नवग्रह यंत्र</h3>
+<p>सभी नौ ग्रहों के नकारात्मक प्रभावों को शांत करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="मंगल यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczN0zJwYLzu8Jfmoz2PLZ2HD_PMh7fNnagrAa0HYgHoZ7e71wVdQuJ20rEQ6J6iS9hbZEHRPeWH2xZZLCL142Dhok6u1AtoRdjxk6zjIjJu2DYQ8CLv_Bu7QX8nQr9jKkSZfImJqPVKWt5j18S8XI74a=w300-h293-s-no-gm?authuser=0"/>
+<h3>मंगल यंत्र</h3>
+<p>मंगल दोष के प्रभाव को कम करने और साहस बढ़ाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="शनि यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMCadzaat2jLmJUgmQVHtb_L-ZptrC_JMspB6iryEkc0wiE3gNzGOOwe0_gP4acI9a0TbgNbgqmLYuquwEiLo5RMBdpcWDKDRdk9DdcLL8ro6VPkqCMp7j1fWMuzjmSbOJfWIsSuOucLpRbRmEyxLmy=w600-h607-s-no-gm?authuser=0"/>
+<h3>शनि यंत्र</h3>
+<p>शनि के नकारात्मक प्रभावों को कम करने और स्थिरता लाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="बुध यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPzN13yKe4P3flBinfpiJzjIrNETKtE2VrVaa62LhX0Qk4kRPqDB0OjSH0B244u_HmilrhMZj3BsN65yEWyaifkLz22g0psdbOaYluWtoyFsvTKtkWqmwNhtKecHYvx9wEDQuhBSgE5OaUHQb_7kJHa=w450-h450-s-no-gm?authuser=0"/>
+<h3>बुध यंत्र</h3>
+<p>बुद्धि, संचार और व्यापार में सफलता के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="गुरु यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPUlXy3RQ3zcFSk5RLYlJtnKZgWGrEGaBecgtbIduv86M1qOoQaY9qdXY6qCytERK59iocIuaEPR8nGoF7DAWR73W2m115rFwXHlmyMJJFIeSr_5RUs-p2wWh0_g5RlPKraLNJeB-uoBrwdfTlvtifZ=w607-h607-s-no-gm?authuser=0"/>
+<h3>गुरु यंत्र</h3>
+<p>ज्ञान, धन और आध्यात्मिक उन्नति के लिए गुरु बृहस्पति का आशीर्वाद।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="राहु यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczMM1D6ODADdFQ0JK9I8TYeh0hnhGP-hoVa-ni_s6gqcv0j4hHAsj2A4s8z51vPytTdH70Y0uzPwodcHuDSVL4677f7iO1RKXdJGiMLGiafJ1nk9lzMSSl8ctBXoZD5ZLYuvg3utUmGUVS3Rmye1v386=w300-h300-s-no-gm?authuser=0"/>
+<h3>राहु यंत्र</h3>
+<p>राहु के नकारात्मक प्रभावों को शांत करने और अप्रत्याशित लाभ के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="केतु यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOAGylABue4n68x97CUbI_c7H6aGY_EIMLUf_Tq0SPthORjE3zvUa21eVB0M-_StX7ARxaWsfPMkUJZCuFi8CCrsL3nJN5mAn9uxx5YHB0H2t7Gznj_C09K2R_-Ic4lpWg8R88aXyr_myN7M9mJ33L-=w600-h593-s-no-gm?authuser=0"/>
+<h3>केतु यंत्र</h3>
+<p>केतु के नकारात्मक प्रभावों को कम करने और आध्यात्मिक मुक्ति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="सूर्य यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczN-xqBIDW83jIFl5by7YhAXy21s2__jaqRf5U2ZLybCiOjAi75v4TzJZ2sjheY1aCP5T19uT3LN7ofnANyM8DqXeeuohJzSWS9kdiHPhRE1Jc7-WjS0FcfBonPteQK2tO_Spki3v5BP_CdpJ8EvQSXE=w425-h436-s-no-gm?authuser=0"/>
+<h3>सूर्य यंत्र</h3>
+<p>जीवन शक्ति, आत्म-सम्मान और सरकारी कार्यों में सफलता के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="चंद्र यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczN29ersnyLmfH7BBIhOPP46R1m2Kjtq7SgmmI83QNAFSfcsYEX6T0-aUbHcSYiBy0VPjBPrpPS1O4mjJG8Z2FA56FJkIzoK-3QNxoPbeQuIDq1Mi9HGkvvZMkwpTDwMcT6Roro_5Tmtf1xqW66--Qco=w300-h300-s-no-gm?authuser=0"/>
+<h3>चंद्र यंत्र</h3>
+<p>मानसिक शांति, भावनात्मक संतुलन और सुख के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+<h3 class="product-category-heading mt-12">रोग, वास्तु और समस्या निवारण के लिए यंत्र</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-card">
+<img alt="रोग नाशक यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOfQgJlHMmTHChX0ozawy9ogT5Iuj7K9elIlEgjOS7bPbPlZlEQY9fpUtNXYg_dWlur719Al5zk4ktQqlS3_fB8fZjaqaTKXGAC1WYEwd-6MWsQZfIZXY9lJw2UoQ46crPrzesnvXY-F9OxBmzc05qf=w312-h300-s-no-gm?authuser=0"/>
+<h3>रोग नाशक यंत्र</h3>
+<p>बीमारियों से मुक्ति और अच्छे स्वास्थ्य की प्राप्ति के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="वास्तु दोष नाशक यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPoLRej_jUCjZ9-YoLgiFE1OJLv94fId8U3u-Qyak4fK9e27JWRCDJZ6-LjHR_remZBgRE0KM9O_6vW0ZM5Nw38tfqyjEx15jC6hIatBe2xXFT_nTExuErXZ83pE_LARXQbioFU3Tv0ozu7ccwM4YAf=w607-h607-s-no-gm?authuser=0"/>
+<h3>वास्तु दोष नाशक यंत्र</h3>
+<p>घर या कार्यस्थल में वास्तु दोषों को दूर करने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="नजर दोष निवारण यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczN2Z_FwukCbbSffgBdhjbWF4cA2OAKcORgVlNaqUDhXkPalPuccpn-VqxW24awTlNjcsOqmZU9yHYbrPZzyYW7e0M4Movy2JOcXaSoM0iABJkn7VCDYDE0-M4_CexhqteWkamsHBGL2VLor6egvtGvQ=w466-h455-s-no-gm?authuser=0"/>
+<h3>नजर दोष निवारण यंत्र</h3>
+<p>बुरी नज़र और नकारात्मक ऊर्जा से सुरक्षा के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="महाकाली रक्षा कवच यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczO4VDLJ8NVkS9ylK19YhQF4y-3mIwE2-NIFu4lVzlmFkD_-fd5D8gKRXDQcx7OcbBcGwb-XHOWGGpk0850nxBfzo4yeDirI_gV-ASRd5gkzsfrPpxpULQwdYKWWwVOVcowkQBV1AdeL-9LtJtLm1NgU=w614-h607-s-no-gm?authuser=0"/>
+<h3>महाकाली रक्षा कवच यंत्र</h3>
+<p>भयंकर खतरों और दुश्मनों से पूर्ण सुरक्षा के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="संपूर्ण रोग नाशक यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOfQgJlHMmTHChX0ozawy9ogT5Iuj7K9elIlEgjOS7bPbPlZlEQY9fpUtNXYg_dWlur719Al5zk4ktQqlS3_fB8fZjaqaTKXGAC1WYEwd-6MWsQZfIZXY9lJw2UoQ46crPrzesnvXY-F9OxBmzc05qf=w312-h300-s-no-gm?authuser=0"/>
+<h3>संपूर्ण रोग नाशक यंत्र</h3>
+<p>सभी प्रकार के रोगों से व्यापक सुरक्षा और स्वास्थ्य लाभ के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="सर्व रोग नाशक यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczOfQgJlHMmTHChX0ozawy9ogT5Iuj7K9elIlEgjOS7bPbPlZlEQY9fpUtNXYg_dWlur719Al5zk4ktQqlS3_fB8fZjaqaTKXGAC1WYEwd-6MWsQZfIZXY9lJw2UoQ46crPrzesnvXY-F9OxBmzc05qf=w312-h300-s-no-gm?authuser=0"/>
+<h3>सर्व रोग नाशक यंत्र</h3>
+<p>सभी बीमारियों से मुक्ति दिलाने वाला प्रभावी यंत्र।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+<div class="product-card">
+<img alt="संपूर्ण वास्तु दोष निवारण यंत्र" class="w-32 h-32 object-cover mx-auto mb-4 rounded-lg shadow-md" src="https://lh3.googleusercontent.com/pw/AP1GczPoLRej_jUCjZ9-YoLgiFE1OJLv94fId8U3u-Qyak4fK9e27JWRCDJZ6-LjHR_remZBgRE0KM9O_6vW0ZM5Nw38tfqyjEx15jC6hIatBe2xXFT_nTExuErXZ83pE_LARXQbioFU3Tv0ozu7ccwM4YAf=w607-h607-s-no-gm?authuser=0"/>
+<h3>संपूर्ण वास्तु दोष निवारण यंत्र</h3>
+<p>समग्र वास्तु दोषों को दूर कर घर में सकारात्मक ऊर्जा लाने के लिए।</p>
+<p class="product-price">₹749</p>
+<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-xl ring-2 ring-yellow-400 animate-bounce transition duration-300 transform hover:scale-105" href="https://wa.me/917836040434" target="_blank">अभी खरीदें</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section-bg-light-yellow py-16 px-4" id="about">
+<div class="container mx-auto text-center md:text-left">
+<h2 class="text-4xl font-extrabold text-gray-900 mb-10">गुरुजी के बारे में</h2>
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/3 mb-8 md:mb-0 md:pr-8">
+<img alt="डॉ. कन्हैया गैरोला" class="rounded-full shadow-lg mx-auto w-48 h-48 object-cover border-4 border-white" src="https://lh3.googleusercontent.com/pw/AP1GczP-v8ORm2fR-doNzWzbQzbE0Jh0XE_ITcQN-6TNhCW8mJFmriYyTGyx1K3haFfEXTKbpEfP9KvwHJM1gl8G1MlSt9C2r4Q0NzSlqtxd3eP_Zt9lqSGkaPymm27qtjdj6cnFnMKsNNWwPqYAcwLy-UA=w284-h278-s-no-gm?authuser=0?text=Guruji"/>
+</div>
+<div class="md:w-2/3">
+<h3 class="text-3xl font-bold text-orange-600 mb-4">डॉ. कन्हैया गैरोला</h3>
+<p class="text-lg text-gray-700 mb-4">
+                        प्रख्यात ज्योतिषाचार्य डॉ. कन्हैया गैरोला 24+ वर्षों के विशाल अनुभव के साथ ज्योतिष के क्षेत्र में एक जाना-माना नाम हैं। उन्होंने हजारों लोगों को उनके जीवन की जटिल समस्याओं से बाहर निकलने में मदद की है।
+                    </p>
+<p class="text-lg text-gray-700">
+                        उनकी विशेषज्ञता **वृक्ष-ज्योतिष** और **प्राकृतिक उपायों** में निहित है। वे प्रकृति के गहरे ज्ञान और प्राचीन ज्योतिषीय सिद्धांतों को मिलाकर व्यक्तिगत मार्गदर्शन प्रदान करते हैं, जिससे जीवन में सकारात्मक बदलाव आते हैं। उनका मानना है कि प्रकृति और आध्यात्मिक ज्ञान का संगम ही वास्तविक समाधान की कुंजी है।
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-bg-white py-16 px-4" id="contact">
+<div class="container mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-gray-900 mb-10">हमसे संपर्क करें</h2>
+<div class="flex flex-col items-center space-y-6">
+<p class="text-2xl font-semibold text-gray-700">
+<svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9.252a1 1 0 001.07 1.687l2.585-1.292a1 1 0 011.127.179l2.585 2.585a1 1 0 01.179 1.127l-1.292 2.585a1 1 0 001.687 1.07l4.324-1.729A1 1 0 0121 16.72V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                    मोबाइल: <a class="text-orange-600 hover:underline" href="tel:+917836040434">7836040434</a>
+</p>
+<p class="text-2xl font-semibold text-gray-700">
+<svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                    ईमेल: <a class="text-orange-600 hover:underline" href="mailto:bhagyadhamonline@gmail.com">bhagyadhamonline@gmail.com</a>
+</p>
+<p class="text-2xl font-semibold text-gray-700">
+<svg class="w-8 h-8 inline-block mr-3 text-orange-500" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c-4.41 0-8 3.59-8 8 0 6 8 14 8 14s8-8 8-14c0-4.41-3.59-8-8-8zm0 11.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path></svg>
+                    स्थान: जनकपुरी, दिल्ली
+                </p>
+</div>
+<div class="mt-10">
+<p class="text-xl text-gray-600">प्रकृति और प्राचीन ज्ञान के संगम से पाएँ व्यक्तिगत मार्गदर्शन।</p>
+</div>
+</div>
+</section>
+<footer class="bg-gray-800 text-white py-6 text-center">
+<div class="container mx-auto px-4">
+<p>© 2025 भाग्या धाम। सभी अधिकार सुरक्षित।</p>
+</div>
+</footer>
+</body>
+</html>
